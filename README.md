@@ -10,7 +10,7 @@
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/yourusername/task-app-api.git
+    git clone https://github.com/Bhavyakumari12/task-app-api.git
     cd task-app-api
     ```
 
