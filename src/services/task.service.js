@@ -18,18 +18,13 @@ export const getTasksService = async (search, filter, page = 1, limit = 10) => {
     { $match: match },
     {
       $facet: {
-        data: [
-          { $skip: (page - 1) * limit },
-          { $limit: limit }
-        ],
-        total: [
-          { $count: "count" }
-        ]
-      }
-    }
+        data: [{ $skip: (page - 1) * limit }, { $limit: limit }],
+        total: [{ $count: "count" }],
+      },
+    },
   ]);
 
-  const total = result.total.length > 0 ? result.total[0].count : 0;
+  const total = result?.total?.[0]?.count || 0;
 
   return { tasks: result.data, total, page, pages: Math.ceil(total / limit) };
 };

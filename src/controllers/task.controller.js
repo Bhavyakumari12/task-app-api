@@ -23,6 +23,8 @@ export const getTasks = async (req, res) => {
     const tasks = await getTasksService(search, filter, page, limit);
     res.status(statusCodes.success).json(tasks);
   } catch (error) {
+    console.log(error);
+    
     res.status(statusCodes.serverError).json({ error: messages.serverError });
   }
 };
