@@ -28,7 +28,7 @@
     MONGO_USERNAME=bhavyasha85
     MONGO_PASSWORD=Yb510iR9EOn3noWi
     MONGO_URL=cluster0.mhyiu.mongodb.net
-    MONGO_DB=cluster0
+    MONGO_DB=task-management
     ```
 
 ## Running the Application
